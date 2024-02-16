@@ -31,5 +31,6 @@ public class Main {
         System.out.println("전화번호: "+phoneNumber);
         System.out.println("주 소: "+address);
         System.out.println("직업: "+job);
+
     }
 }
