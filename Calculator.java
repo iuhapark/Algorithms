@@ -25,7 +25,7 @@ public class Calculator {
         } else if (opcode.equals("/")) {
             result = intNum1 / intNum2;
         } else {
-            System.out.println("잘못된 연산기호 입니다.");
+            System.out.println("잘못된 연산기호입니다.");
             return;
 
         }
