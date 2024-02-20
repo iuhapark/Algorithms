@@ -1,4 +1,4 @@
-package mathTest;
+package MathTest;
 
 public class RandomTest {
     static int returnRandomNumber(){
