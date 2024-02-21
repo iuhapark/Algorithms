@@ -1,5 +1,14 @@
 package KaupOOP;
 
 public class KaupServiceImpl implements KaupService{
-    public void createBmi
+
+    @Override
+    public double createBMI() {
+        return 0.0;
+    }
+
+    @Override
+    public String createBodyMass() {
+        return "";
+    }
 }
