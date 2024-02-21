@@ -1,71 +1,75 @@
 package MemberOOP;
 
-public class Member {    private String userID;
-    private String passWord;
-    private String passWordAgain;
-    private String userName;
-    private String personNumber;
+public class Member {
+    private String username;
+    private String password;
+    private String pwAgain;
+    private String name;
+    private String ssn;
     private String phoneNumber;
     private String address;
     private String job;
     private double height;
     private double weight;
+
     //Kauf지수에서 사용하는 생성자
-    public MemberModel(double height, double weight){
+    public Member(double height, double weight) {
         this.weight = weight;
         this.height = height;
     }
 
     //회원가입에서 사용하는 생성자
-    public MemberModel(String userID,String passWord,String passWordAgain,String userName,
-                       String personNumber,String phoneNumber,String address,
-                       String job){
-        this.userID = userID;
-        this.passWord = passWord;
-        this.passWordAgain = passWordAgain;
-        this.userName = userName;
-        this.personNumber = personNumber;
+    public Member(String username, String password, String pwAgain, String name,
+                  String ssn, String phoneNumber, String address,
+                  String job) {
+        this.username = name;
+        this.password = password;
+        this.pwAgain = pwAgain;
+        this.name = name;
+        this.ssn = ssn;
         this.phoneNumber = phoneNumber;
         this.address = address;
         this.job = job;
     }
 
-    public String getUserID() {
-        return this.userID;
+    public String getName() {
+        return this.name;
     }
 
-    public void setUserID(String userID) {
-        this.userID = userID;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getPassWord() {
-        return this.passWord;
+    public String getPassword() {
+        return this.password;
     }
 
-    public void setPassWord(String passWord) {
-        this.passWord = passWord;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public String getPassWordAgain() {
-        return this.passWordAgain;
+    public String getpwAgain() {
+        return this.pwAgain;
     }
 
-    public void setPassWordAgain(String passWordAgain) {
-        this.passWordAgain = passWordAgain;
+    public void setpwAgain(String pwAgain) {
+        this.pwAgain = pwAgain;
     }
 
-    public String getUserName() {
-        return this.userName;
+    public String getname() {
+        return this.name;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setname(String name) {
+        this.name = name;
     }
 
-    public String getPersonNumber() { return this.personNumber; }
+    public String getssn() {
+        return this.ssn;
+    }
 
-    public void setPersonNumber(String personNumber) {
-        this.personNumber = personNumber;
+    public void setssn(String ssn) {
+        this.ssn = ssn;
     }
 
     public String getPhoneNumber() {
@@ -95,11 +99,11 @@ public class Member {    private String userID;
 //    @Override
 //    public String toString() {
 //        return "MemberModel{" +
-//                "userID='" + userID + '\'' +
-//                ", passWord='" + passWord + '\'' +
-//                ", passWordAgain='" + passWordAgain + '\'' +
+//                "username='" + username + '\'' +
+//                ", password='" + password + '\'' +
+//                ", pwAgain='" + pwAgain + '\'' +
 //                ", userName='" + userName + '\'' +
-//                ", personNumber='" + personNumber + '\'' +
+//                ", ssn='" + ssn + '\'' +
 //                ", phoneNumber='" + phoneNumber + '\'' +
 //                ", address='" + address + '\'' +
 //                ", job='" + job + '\'' +
@@ -125,11 +129,11 @@ public class Member {    private String userID;
     @Override
     public String toString() {
         return "MemberModel{" +
-                "userID='" + userID + '\'' +
-                ", passWord='" + passWord + '\'' +
-                ", passWordAgain='" + passWordAgain + '\'' +
-                ", userName='" + userName + '\'' +
-                ", personNumber='" + personNumber + '\'' +
+                "username='" + username + '\'' +
+                ", passWord='" + password + '\'' +
+                ", pwAgain='" + pwAgain + '\'' +
+                ", userName='" + name + '\'' +
+                ", ssn='" + ssn + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", address='" + address + '\'' +
                 ", job='" + job + '\'' +
