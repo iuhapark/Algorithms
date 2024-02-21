@@ -1,6 +1,6 @@
 package gradeOOP;
 
-public class Person {
+public class Student {
     private String name;
     private double koreanScore;
     private double englishScore;
