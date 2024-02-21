@@ -27,11 +27,11 @@ public class Test1 {
                     }
                 }
             }
-        for(int i = 0; i<9; i++) {
+        for(int i = 0; i<8; i++) {
             if(i == a || i == b)
                 continue;
+
             System.out.println(height[i]);
         }
-        sc.close();
     }
 }
