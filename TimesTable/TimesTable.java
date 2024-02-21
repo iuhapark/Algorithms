@@ -1,6 +1,8 @@
+package TimesTable;
+
 import java.util.Scanner;
 
-public class MultiplicationTable {
+public class TimesTable {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.printf("2부터 9까지 정수 값을 입력하세요.: ");

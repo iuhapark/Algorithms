@@ -1,4 +1,6 @@
-public class MultiplicationTable2 {
+package TimesTable;
+
+public class TimesTable2 {
     public static void main(String[] args) {
 
         int i, j;
