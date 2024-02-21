@@ -1,37 +1,66 @@
 package KaupOOP;
 
+import MemberOOP.Member;
+
 import java.security.spec.RSAOtherPrimeInfo;
 import java.util.Scanner;
 
-public class KaupView {
-    static double returnRandomHeight(){
-        double randomHeight = (150+Math.random()*50); //0 이상 50 미만의 값을 생성하고 150을 더해줌으로써 키의 범위를 150 이상 200 미만으로 만듦
-        randomHeight = Math.floor(randomHeight*10)/10;
-        System.out.printf("랜덤 키: %.1f", randomHeight);
-        return randomHeight;
-    }
-    static double returnRandomWeight() {
-        double randomWeight = (30+Math.random()*70); //0 이상 70 미만의 값을 생성하고 30을 더해줌으로써 체중의 범위를 30 이상 100 미만으로 만듦
-        randomWeight = Math.floor(randomWeight*10)/10;
-        System.out.printf("랜덤 체중: %.1f", randomWeight);
-        return randomWeight;
-    }
+public class KaupView { static String test;
+
     public static void main(String[] args) {
-
-        Person person = new Person();
         Scanner sc = new Scanner(System.in);
-        System.out.printf("이름: ");
-        person.setName(sc.next());
-        person.setHeight(returnRandomHeight()); //set은 접두사로 사용
-        person.setWeight(returnRandomWeight());
-        person.createBMI();
-        person.createBodyMass();
+        Member person = new Member((Math.random()*50)+150,
+                (Math.random()*69)+30);
 
-        System.out.println("BMI 계산기");
-        System.out.println("이름: "+person.getName());
-        System.out.println("키: "+person.getHeight());
-        System.out.println("몸무게: "+person.getWeight());
-        System.out.printf("BMI는"+person.getBmi()+"입니다.",person.getBmi());
-        System.out.printf("당신은 "+person.getBodyMass()+"입니다.");
+        KaupService service = new KaupServiceImpl();
+
+//        System.out.printf("이름 입력 : ");
+//        String name = sc.next();
+//        double mainHeight = (Math.random()*50)+150;
+//        double mainWeight = (Math.random()*69)+30;
+//        *String bmiResult = "";
+
+//        double mainbmi = mainWeight / ((mainHeight*0.01)*(mainHeight*0.01));
+//
+//        if (mainbmi < 18.5){
+//            bmiResult = "저체중";
+//        } else if (mainbmi >= 18.5 && mainbmi <= 22.9) {
+//            bmiResult = "정상";
+//        } else if (mainbmi >=23 && mainbmi <=24.9) {
+//            bmiResult = "과체중";
+//        } else if (mainbmi >=25 && mainbmi <=29.9) {
+//            bmiResult = "비만";
+//        } else if (mainbmi >=30) {
+//            bmiResult = "고도비만";
+//        }*/
+
+//        person.setName(name);
+//        System.out.println("이름 : "+person.getName());
+
+//        person.setHeight(mainHeight);
+//        System.out.println("키 : " + (int)person.getHeight() + "cm");
+//
+//        person.setWeight(mainWeight);
+//        System.out.println("몸무게 : " + (int)person.getWeight() + "kg");
+
+//        person.createName();
+//        String name = person.getName();
+//        System.out.println("이름 : "+person.getName());
+//
+//        person.createHeight();
+//        double height = person.getHeight();
+//        System.out.println("키 : "+(int)person.getHeight());
+//
+//        person.createWeight();
+//        double weight = person.getWeight();
+//        System.out.println("몸무게 : "+(int)person.getWeight());
+//
+        double bmi = service.createBMI();
+//        double bmi = person.getBmi();
+        System.out.println("BMI : " +bmi);
+//
+        String bodyMass = service.createBodyMass();
+//        String bodyMass = person.getBodyMass();
+        System.out.println("비만도 : "+bodyMass);
     }
 }
