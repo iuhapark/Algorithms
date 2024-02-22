@@ -11,4 +11,9 @@ public class KaupServiceImpl implements KaupService{
     public String createBodyMass() {
         return "";
     }
+
+    @Override
+    public double createBmi() {
+        return 0;
+    }
 }

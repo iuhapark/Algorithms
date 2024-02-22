@@ -2,65 +2,27 @@ package KaupOOP;
 
 import MemberOOP.Member;
 
-import java.security.spec.RSAOtherPrimeInfo;
 import java.util.Scanner;
 
 public class KaupView { static String test;
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Member person = new Member((Math.random()*50)+150,
-                (Math.random()*69)+30);
+
+        Member person = new Member(Math.floor((150 + Math.random() * 50) * 10) / 10
+                , Math.floor((30 + Math.random() * 70) * 10) / 10);
 
         KaupService service = new KaupServiceImpl();
 
-//        System.out.printf("이름 입력 : ");
-//        String name = sc.next();
-//        double mainHeight = (Math.random()*50)+150;
-//        double mainWeight = (Math.random()*69)+30;
-//        *String bmiResult = "";
-
-//        double mainbmi = mainWeight / ((mainHeight*0.01)*(mainHeight*0.01));
-//
-//        if (mainbmi < 18.5){
-//            bmiResult = "저체중";
-//        } else if (mainbmi >= 18.5 && mainbmi <= 22.9) {
-//            bmiResult = "정상";
-//        } else if (mainbmi >=23 && mainbmi <=24.9) {
-//            bmiResult = "과체중";
-//        } else if (mainbmi >=25 && mainbmi <=29.9) {
-//            bmiResult = "비만";
-//        } else if (mainbmi >=30) {
-//            bmiResult = "고도비만";
-//        }*/
-
-//        person.setName(name);
-//        System.out.println("이름 : "+person.getName());
-
-//        person.setHeight(mainHeight);
-//        System.out.println("키 : " + (int)person.getHeight() + "cm");
-//
-//        person.setWeight(mainWeight);
-//        System.out.println("몸무게 : " + (int)person.getWeight() + "kg");
-
-//        person.createName();
-//        String name = person.getName();
-//        System.out.println("이름 : "+person.getName());
-//
-//        person.createHeight();
-//        double height = person.getHeight();
-//        System.out.println("키 : "+(int)person.getHeight());
-//
-//        person.createWeight();
-//        double weight = person.getWeight();
-//        System.out.println("몸무게 : "+(int)person.getWeight());
-//
-        double bmi = service.createBMI();
-//        double bmi = person.getBmi();
-        System.out.println("BMI : " +bmi);
-//
+        double bmi = service.createBmi();
         String bodyMass = service.createBodyMass();
-//        String bodyMass = person.getBodyMass();
-        System.out.println("비만도 : "+bodyMass);
+
+        System.out.println("================= BMI 계산기 =================");
+        System.out.println("이름: " + person.getName());
+        System.out.println("키: " + person.getHeight());
+        System.out.println("몸무게: " + person.getWeight());
+        System.out.printf("BMI는 %.1f 입니다\n", bmi);
+        System.out.println(bodyMass + "입니다.");
+        System.out.println("================= BMI 계산기 =================");
     }
-}
+    }
