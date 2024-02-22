@@ -22,7 +22,7 @@ public class Member {
     public Member(String username, String password, String pwAgain, String name,
                   String ssn, String phoneNumber, String address,
                   String job) {
-        this.username = name;
+        this.username = username;
         this.password = password;
         this.pwAgain = pwAgain;
         this.name = name;
@@ -32,11 +32,11 @@ public class Member {
         this.job = job;
     }
 
-    public String getName() {
-        return this.name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
+    public void setUsername(String name) {
         this.name = name;
     }
 
@@ -48,11 +48,11 @@ public class Member {
         this.password = password;
     }
 
-    public String getpwAgain() {
+    public String getPwAgain() {
         return this.pwAgain;
     }
 
-    public void setpwAgain(String pwAgain) {
+    public void setPwAgain(String pwAgain) {
         this.pwAgain = pwAgain;
     }
 
@@ -137,11 +137,14 @@ public class Member {
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", address='" + address + '\'' +
                 ", job='" + job + '\'' +
-//                ", name='" + name + '\'' +
                 ", height=" + height +
                 ", weight=" + weight +
 //                ", bmi=" + bmi +
 //                ", bodyMass='" + bodyMass + '\'' +
                 '}';
+    }
+
+    public String getName() {
+        return null;
     }
 }
