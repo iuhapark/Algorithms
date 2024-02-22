@@ -1,10 +1,11 @@
 package gradeOOP;
 
 public class Student {
+
     private String name;
-    private double koreanScore;
-    private double englishScore;
-    private double mathScore;
+    private double korean;
+    private double english;
+    private double math;
     private double avg;
 
     public void setName(String name) {
@@ -15,32 +16,32 @@ public class Student {
         return this.name;
     }
 
-    public void setKoreanScore(double koreanScore) {
-        this.koreanScore = koreanScore;
+    public void setKorean(double koreanScore) {
+        this.korean = koreanScore;
     }
 
-    public double getKoreanScore() {
-        return this.koreanScore;
+    public double getKorean() {
+        return this.korean;
     }
 
-    public void setEnglishScore(double englishScore) {
-        this.englishScore = englishScore;
+    public void setEnglish(double englishScore) {
+        this.english = englishScore;
     }
 
-    public double getEnglishScore() {
-        return this.englishScore;
+    public double getEnglish() {
+        return this.english;
     }
     public void setMathScore(double mathScore) {
-        this.mathScore = mathScore;
+        this.math = mathScore;
     }
     public double getMathScore() {
-        return this.mathScore;
+        return this.math;
     }
     public double getAvg() {
         return this.avg;
 
-        }
+    }
     public void createAVG() {
-        this.avg = koreanScore+englishScore+mathScore;
+        this.avg = korean+english+math;
     }
 }
