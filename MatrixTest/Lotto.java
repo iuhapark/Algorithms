@@ -1,6 +1,6 @@
 package MatrixTest;
 
-import java.util.Random;
+import javax.security.auth.login.AccountLockedException;
 
 public class Lotto {
     public static void main(String[] args) {
@@ -37,6 +37,13 @@ public class Lotto {
         for (int i = 0; i < lottoNum.length; i++) {
             System.out.print(lottoNum[i] + " ");
         }
+    }
+
+    public static interface ILottoMatch {
+        public int findSame(int[] originLotto, int[] myLotto){
+            int count = 0;
+        }
+
     }
 }
 

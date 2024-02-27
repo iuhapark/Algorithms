@@ -16,7 +16,7 @@ import java.util.Scanner;
  * 4등 3개 맞춤
  * 꽝 2개 이하
  */
-public class LottoMatching {
+public class LottoMatch {
     public static void main(String[] args) {
         int[] arr = new int[6];
         // 중복되지 않은 상태
@@ -28,10 +28,7 @@ public class LottoMatching {
     }
 
     //6개의 숫자 로또 프린트
-
-
 }
-
 class BuyLotto {
     public static void main(String[] args) {
         buyLotto();
