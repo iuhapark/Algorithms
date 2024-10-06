@@ -1,7 +1,5 @@
 package MatrixTest;
 
-import javax.security.auth.login.AccountLockedException;
-
 public class Lotto {
     public static void main(String[] args) {
 
@@ -39,12 +37,6 @@ public class Lotto {
         }
     }
 
-    public static interface ILottoMatch {
-        public int findSame(int[] originLotto, int[] myLotto){
-            int count = 0;
-        }
-
-    }
 }
 
 
